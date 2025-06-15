@@ -28,6 +28,7 @@ jobs:
           upstream_sync_branch: main
           target_sync_branch: main
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          force_push: true  # 强制以源仓库代码覆盖冲突
 
       - name: Sync check
         if: failure()
